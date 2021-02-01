@@ -101,16 +101,16 @@ namespace OrbitaTech.TTLock
         /// .ctor
         /// </summary>
         /// <param name="apiPath"></param>
-        /// <param name="serverURI"></param>
+        /// <param name="serverUri"></param>
         /// <exception cref="FormatException"><paramref name="apiPath"/> is invalid.</exception>
-        protected TTLockCloudAPI(string apiPath, Uri serverURI = null)
+        protected TTLockCloudAPI(string apiPath, Uri serverUri = null)
         {
-            ServerURI = serverURI ?? DefaultServerURI;
+            ServerURI = serverUri ?? DefaultServerURI;
 
-            ApiURI = new Uri(serverURI, apiPath);
+            ApiURI = new Uri(ServerURI, apiPath);
         }
 
-        protected long GetCurrentUnixTimeInMilliseconds => DateTime.UtcNow.GetUnixTimeInMilliseconds();
+        protected static long GetCurrentUnixTimeInMilliseconds => DateTime.UtcNow.GetUnixTimeInMilliseconds();
 
         #region Public properties
 
