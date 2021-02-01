@@ -27,6 +27,8 @@ namespace OrbitaTech.TTLock
         {
             var dto = await PostRequest<PageResultDto<UserRegistrationInfoDto>>("list",
                 CreateDictionary(
+                    "pageNo", page.ToString(),
+                    "pageSize", pageSize.ToString(),
                     "startDate", (startDate?.GetUnixTimeInMilliseconds() ?? 0).ToString(),
                     "endDate", (finishDate?.GetUnixTimeInMilliseconds() ?? 0).ToString()
                 ),
