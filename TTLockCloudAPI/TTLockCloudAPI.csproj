@@ -5,6 +5,10 @@
     <RootNamespace>OrbitaTech.TTLock</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
   <ItemGroup>
     <Folder Include="Exceptions\" />
   </ItemGroup>
